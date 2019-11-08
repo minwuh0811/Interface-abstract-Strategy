@@ -5,9 +5,14 @@ public abstract  class Fighter {
         this.actionStrategy=actionStratege;
     }
 
-    public ActionStrategy performAction(){
-        return actionStrategy;
+    //public ActionStrategy performAction(){
+        //return actionStrategy;
+    //}
+
+    public String performAction(){
+        return actionStrategy.action();
     }
+
 
     abstract void greet();
 }

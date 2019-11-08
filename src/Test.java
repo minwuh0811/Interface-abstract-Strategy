@@ -9,7 +9,7 @@ class Test {
     ArrayList<String> actions=new ArrayList<>();
     @org.junit.jupiter.api.Test
     void greet() {
-        
+
         ryu.greet();
         chan.greet();
         ken.greet();
@@ -17,11 +17,11 @@ class Test {
     @org.junit.jupiter.api.Test
     void actionJump(){
         ryu.setActionStratege(new Jump());
-        actions.add(ryu.performAction().action());
+        actions.add(ryu.performAction());
         chan.setActionStratege(new Jump());
-        actions.add(chan.performAction().action());
+        actions.add(chan.performAction());
         ken.setActionStratege(new Jump());
-        actions.add(ken.performAction().action());
+        actions.add(ken.performAction());
         ArrayList<String> actionExpect= new ArrayList<>();
         actionExpect.add("Jump");
         actionExpect.add("Jump");
@@ -32,11 +32,11 @@ class Test {
     @org.junit.jupiter.api.Test
     void actionRoll(){
         ryu.setActionStratege(new Roll());
-        actions.add(ryu.performAction().action());
+        actions.add(ryu.performAction());
         chan.setActionStratege(new Roll());
-        actions.add(chan.performAction().action());
+        actions.add(chan.performAction());
         ken.setActionStratege(new Roll());
-        actions.add(ken.performAction().action());
+        actions.add(ken.performAction());
         ArrayList<String> actionExpect= new ArrayList<>();
         actionExpect.add("Roll");
         actionExpect.add("Roll");
