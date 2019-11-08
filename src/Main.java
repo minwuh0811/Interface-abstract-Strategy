@@ -1,19 +1,26 @@
 public class Main {
+    private Fighter fighter1;
+    private Fighter fighter2;
 
 
     public static void main(String[] args) {
-        Ryu ryu=new Ryu();
-        Chan chan=new Chan();
-        Ken ken=new Ken();
-        ryu.greet();
-        chan.greet();
-        ken.greet();
+        Main man=new Main();
+    }
 
-        ryu.setActionStratege(new Jump());
-        ryu.performAction().action();
-        chan.setActionStratege(new Jump());
-        chan.performAction().action();
-        ken.setActionStratege(new Jump());
-        ken.performAction().action();
+    public Main() {
+        fighter1=new Ken();
+        fighter2=new Chan();
+
+        fighter1.setActionStratege(new Jump());
+        fighter2.setActionStratege(new Roll());
+
+        fighter1.greet();
+        fighter2.greet();
+
+        fighter1.performAction();
+        fighter2.performAction();
+
+        fighter1.performAction();
+        fighter2.performAction();
     }
 }
