@@ -9,6 +9,7 @@ class Test {
     ArrayList<String> actions=new ArrayList<>();
     @org.junit.jupiter.api.Test
     void greet() {
+        
         ryu.greet();
         chan.greet();
         ken.greet();
